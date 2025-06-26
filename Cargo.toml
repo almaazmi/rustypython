@@ -3,5 +3,9 @@ name = "rust_call_python"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "rust_python_bridge"
+crate-type = ["cdylib"]  # Creates a dynamic library with C ABI
+
 [dependencies]
 pyo3 = { version = "0.22", features = ["auto-initialize"] }
